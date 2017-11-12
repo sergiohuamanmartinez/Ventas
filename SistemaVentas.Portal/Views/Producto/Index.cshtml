@@ -1,0 +1,37 @@
+﻿@*@model IEnumerable<SistemaVentas.Entities.Producto>*@
+@model ProductoViewModel
+
+@{ 
+    ViewData["title"] = "Lista de Productos";
+    //Layout
+}
+
+<h2>Listado de Productos</h2>
+
+@if (Model.ExistenProductos)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                @*<th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+                    <th>@Html.DisplayNameFor(model => model.UnidadMedidad)</th>*@
+                <th>@Html.DisplayNameFor(model => model.Productos[0].Descripcion)</th>
+                <th>@Html.DisplayNameFor(model => model.Productos[0].UnidadMedidad)</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Productos)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                    <td>@Html.DisplayFor(modelItem => item.UnidadMedidad)</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else { 
+    <p>No existen Productos.</p>
+}

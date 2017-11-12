@@ -1,0 +1,40 @@
+﻿@model SistemaVentas.Entities.Producto
+
+@{
+    ViewData["title"] = "detalle de Producto";
+    //Layout
+}
+
+<h2>Detalle de Producto</h2>
+
+<div class="container">
+    <div class="col-xs-12">
+        <div class="row">
+            <label class="control-label">@Html.DisplayNameFor(model => model.Descripcion)</label>
+            <label class="form-control">@Html.DisplayFor(modelItem => Model.Descripcion)</label>
+        </div>
+        <div class="row">
+            <label class="control-label">@Html.DisplayNameFor(model => model.UnidadMedidad)</label>
+            <label class="form-control">@Html.DisplayFor(modelItem => Model.UnidadMedidad)</label>
+        </div>
+
+    </div>
+</div>
+
+@*<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+            <th>@Html.DisplayNameFor(model => model.UnidadMedidad)</th>
+        </tr>
+
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>@Html.DisplayFor(modelItem => Model.Descripcion)</td>
+            <td>@Html.DisplayFor(modelItem => Model.UnidadMedidad)</td>
+        </tr>
+
+    </tbody>
+</table>*@
